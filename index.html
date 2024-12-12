@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Exam</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <h1 style="color: rgb(0, 2, 139);"> ATWIJUKIRE SETH - Final Exam</h1>
+  </div>
+
+  <!-- Main Content -->
+<div>
+  <div class="container">
+    <!-- Image Display Section -->
+    <div class="image-container">
+      <img id="image-display" src="comp.jpeg" alt="Image 1">
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons" style="color: blue;">
+      <button id="prev-btn">Previous Image</button>
+      <button id="next-btn">Next Image</button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for Image Navigation
+    const images = ["comp.jpeg", "C.jpeg"]; // Array of image sources
+    let currentIndex = 0;
+
+    const imageDisplay = document.getElementById("image-display");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    // Function to update the displayed image
+    function updateImage() {
+      imageDisplay.src = images[currentIndex];
+    }
+
+    // Previous Button Click Event
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateImage();
+    });
+
+    // Next Button Click Event
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateImage();
+    });
+  </script>
+</div>
+
+      <!-- Details Section -->
+      <div class="us_container ">
+        <div class="row">
+            <div class="col-md-8 details-box">
+
+                <p><strong>MY DETAILS:</strong></p>
+                <p>Name: ATWIJUKIRE SETH </p>
+                <p>Reg. NO. 22/EDS/BU/R/0017: </p>
+                <p>Exam Number: 24SEM/BU/Exam1707</p>
+                <p>Email: atwijukireseth1@gmail.com </p>
+                <p>Phone Contact: +256 774500279</p>
+              </div>
+            </div>
+            </div>
+          </div> 
+
+
+    <!-- Navigation Buttons -->
+    
+
+    <!-- Footer Links -->
+    <div class="footer-links">
+    <div>
+        <h1>Personal Website Links:</h1>
+        <a class="nav-link" style="color: blue;" href="https://atwijukireseth.github.io/PERSONAL-END-SEM/">PERSONAL-GITHUB</a>
+        <a class="nav-link" style="color: blue;" href="https://seth-portifolio.netlify.app/">PERSONAL-NETRIFY</a>
+    </div>
+      <div>
+        <h1>Organization Website Links: </h1>
+        <a class="nav-link" style="color: blue;" href="https://atwijukireseth.github.io/SCHOOL-END-SEM/">ORGANIZATION-GITHUB</a>
+        <a class="nav-link" style="color: blue;" href="https://secodary-school.netlify.app/">ORGANIZATION-NETRIFY</a>
+    </div>
+    </div>
+  </div>
+  <!-- footer section -->
+  <footer class="container-fluid footer_section" style="text-align: center;">
+    <p>
+      &copy; 2025 All Rights Reserved. Design by SETH ENTERPRIZES
+      
+    </p>
+  </footer>
+  <!-- footer section -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
